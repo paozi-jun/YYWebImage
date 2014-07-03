@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func setWebImage(url:NSString,placeHolder:UIImage?,flag:Int){
+    func setWebImage(url:NSString,placeHolder:UIImage?,flag:Int,completeBlock:((imageView:UIImageView)->())?,errorBlock:((imageView:UIImageView)->())?){
         self.userInteractionEnabled = false
         self.layer.removeAllAnimations()
         if placeHolder {
@@ -23,14 +23,29 @@ extension UIImageView {
             var data:NSData? = NSData(contentsOfFile:path)
             if data == nil {
                 data = NSData(contentsOfURL:URL)
-                data!.writeToFile(path,atomically:true)
+                if data{
+                    data!.writeToFile(path,atomically:true)
+                }
             }
-            if self.tag == flag || flag == 0{
-                self.image = UIImage(data:data)
+            if data {
+                if completeBlock {
+                    completeBlock!(imageView: self)
+                }
+                if self.tag == flag || flag == 0{
+                    self.image = UIImage(data:data)
+                }
+            }else {
+                if errorBlock {
+                    errorBlock!(imageView: self)
+                }
             }
             ai.stopAnimating()
             ai.removeFromSuperview()
         }
+    }
+    
+    func setWebImage(url:NSString,placeHolder:UIImage?,flag:Int){
+        self.setWebImage(url, placeHolder: placeHolder, flag: flag, completeBlock:nil, errorBlock:nil)
     }
     
     func setWebImage(url:NSString){

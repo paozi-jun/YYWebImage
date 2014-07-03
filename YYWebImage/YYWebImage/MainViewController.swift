@@ -18,7 +18,11 @@ class MainViewController: UIViewController {
         var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.view.addSubview(imageView)
-        imageView.setWebImage(url)
+        imageView.setWebImage(url, placeHolder: nil, flag: 0, completeBlock:{(imageView: UIImageView) -> () in
+            println("完成")
+            }, errorBlock: {(imageView: UIImageView) -> () in
+                println("失败了")
+            })
     }
 
     override func didReceiveMemoryWarning() {
