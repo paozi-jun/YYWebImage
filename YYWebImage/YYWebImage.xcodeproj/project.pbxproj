@@ -12,6 +12,8 @@
 		8FAAF0E01964EFD2008D41FD /* YYWebImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0DF1964EFD2008D41FD /* YYWebImageTests.swift */; };
 		8FAAF0ED1964F21B008D41FD /* UIImageView+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */; };
 		8FAAF0EF1964F67B008D41FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0EE1964F67B008D41FD /* MainViewController.swift */; };
+		8FAAF0F11964F94F008D41FD /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0F01964F94F008D41FD /* UIImageView+Cache.swift */; };
+		8FAAF0F31964FAC0008D41FD /* UIImageView+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0F21964FAC0008D41FD /* UIImageView+Define.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		8FAAF0DF1964EFD2008D41FD /* YYWebImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYWebImageTests.swift; sourceTree = "<group>"; };
 		8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Web.swift"; sourceTree = "<group>"; };
 		8FAAF0EE1964F67B008D41FD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8FAAF0F01964F94F008D41FD /* UIImageView+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		8FAAF0F21964FAC0008D41FD /* UIImageView+Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Define.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */,
+				8FAAF0F01964F94F008D41FD /* UIImageView+Cache.swift */,
+				8FAAF0F21964FAC0008D41FD /* UIImageView+Define.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -215,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FAAF0EF1964F67B008D41FD /* MainViewController.swift in Sources */,
+				8FAAF0F11964F94F008D41FD /* UIImageView+Cache.swift in Sources */,
 				8FAAF0D21964EFD2008D41FD /* AppDelegate.swift in Sources */,
 				8FAAF0ED1964F21B008D41FD /* UIImageView+Web.swift in Sources */,
+				8FAAF0F31964FAC0008D41FD /* UIImageView+Define.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

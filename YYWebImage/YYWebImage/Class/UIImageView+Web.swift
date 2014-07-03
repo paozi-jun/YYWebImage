@@ -15,12 +15,12 @@ extension UIImageView {
         self.addSubview(ai)
         ai.center = self.center
         ai.startAnimating()
-        var aUrl = NSURL(string: url)
         dispatch_async(dispatch_get_main_queue()) {
-            var path = NSHomeDirectory().stringByAppendingFormat("/Library/Caches/%u", aUrl.description.hash)
+            var URL = NSURL(string: url)
+            var path = NSHomeDirectory().stringByAppendingFormat("%@/%u",FILEPATH, URL.description.hash)
             var data:NSData? = NSData(contentsOfFile:path)
             if data == nil {
-                data = NSData(contentsOfURL:aUrl)
+                data = NSData(contentsOfURL:URL)
                 data!.writeToFile(path,atomically:true)
             }
             if self.tag == flag || flag == 0{
