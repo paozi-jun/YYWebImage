@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
         UIImageView.removeAllCacheImages()
         
         var imageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.view.addSubview(imageView)
         imageView.setWebImage(url)
     }
