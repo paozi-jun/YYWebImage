@@ -10,6 +10,8 @@
 		8FAAF0D21964EFD2008D41FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0D11964EFD2008D41FD /* AppDelegate.swift */; };
 		8FAAF0D41964EFD2008D41FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FAAF0D31964EFD2008D41FD /* Images.xcassets */; };
 		8FAAF0E01964EFD2008D41FD /* YYWebImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0DF1964EFD2008D41FD /* YYWebImageTests.swift */; };
+		8FAAF0ED1964F21B008D41FD /* UIImageView+Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */; };
+		8FAAF0EF1964F67B008D41FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAAF0EE1964F67B008D41FD /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		8FAAF0D91964EFD2008D41FD /* YYWebImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYWebImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAAF0DE1964EFD2008D41FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FAAF0DF1964EFD2008D41FD /* YYWebImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYWebImageTests.swift; sourceTree = "<group>"; };
+		8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Web.swift"; sourceTree = "<group>"; };
+		8FAAF0EE1964F67B008D41FD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,9 @@
 		8FAAF0CE1964EFD2008D41FD /* YYWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				8FAAF0E91964F0A4008D41FD /* Class */,
 				8FAAF0D11964EFD2008D41FD /* AppDelegate.swift */,
+				8FAAF0EE1964F67B008D41FD /* MainViewController.swift */,
 				8FAAF0D31964EFD2008D41FD /* Images.xcassets */,
 				8FAAF0CF1964EFD2008D41FD /* Supporting Files */,
 			);
@@ -101,6 +107,14 @@
 				8FAAF0DE1964EFD2008D41FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FAAF0E91964F0A4008D41FD /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				8FAAF0EC1964F21B008D41FD /* UIImageView+Web.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAAF0EF1964F67B008D41FD /* MainViewController.swift in Sources */,
 				8FAAF0D21964EFD2008D41FD /* AppDelegate.swift in Sources */,
+				8FAAF0ED1964F21B008D41FD /* UIImageView+Web.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +393,7 @@
 				8FAAF0E51964EFD2008D41FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FAAF0E61964EFD2008D41FD /* Build configuration list for PBXNativeTarget "YYWebImageTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +402,7 @@
 				8FAAF0E81964EFD2008D41FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
