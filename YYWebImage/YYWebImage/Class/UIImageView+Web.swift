@@ -17,7 +17,9 @@ extension UIImageView {
         ai.startAnimating()
         dispatch_async(dispatch_get_main_queue()) {
             var URL = NSURL(string: url)
-            var path = NSHomeDirectory().stringByAppendingFormat("%@/%u",FILEPATH, URL.description.hash)
+            var path = NSHomeDirectory().stringByAppendingFormat("%@",FILEPATH)
+            NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
+            path = NSHomeDirectory().stringByAppendingFormat("%@/%u",FILEPATH,URL.description.hash)
             var data:NSData? = NSData(contentsOfFile:path)
             if data == nil {
                 data = NSData(contentsOfURL:URL)
